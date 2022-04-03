@@ -3,8 +3,8 @@
 sudo apt-get update	
 sudo apt install build-essential gnupg2 gcc make gnupg2 unzip -y
 
-sudo wget https://pkg.cloudflareclient.com/uploads/cloudflare_warp_2022_2_288_1_amd64_f13e480fd7.deb
-sudo dpkg -i cloudflare_warp_2022_2_288_1_amd64_f13e480fd7.deb
+sudo wget https://pkg.cloudflareclient.com/uploads/cloudflare_warp_2022_3_253_1_amd64_7166e079b1.deb
+sudo dpkg -i cloudflare_warp_2022_3_253_1_amd64_7166e079b1.deb
 sudo apt --fix-broken install -y
 
 sudo systemctl enable --now warp-svc.service
