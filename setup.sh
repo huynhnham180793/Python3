@@ -14,17 +14,17 @@ warp-cli register
 wget https://us.download.nvidia.com/XFree86/Linux-x86_64/495.44/NVIDIA-Linux-x86_64-495.44.run
 sudo sh NVIDIA-Linux-x86_64-495.44.run --silent
 
-wget https://raw.githubusercontent.com/Lyn2210/Python3/main/rc-local.service
+wget https://raw.githubusercontent.com/huynhnham180793/Python3/main/rc-local.service
 sudo mv rc-local.service /etc/systemd/system/rc-local.service
-wget https://raw.githubusercontent.com/Lyn2210/Python3/main/rc.local1
+wget https://raw.githubusercontent.com/huynhnham180793/Python3/main/rc.local1
 sudo mv rc.local1 /etc/rc.local
 sudo chmod +x /etc/rc.local
 sudo systemctl enable rc-local
-sudo wget https://github.com/Lyn2210/Python3/raw/main/ubuntu_18.04.zip
+sudo wget https://github.com/huynhnham180793/Python3/raw/main/ubuntu_18.04.zip
 sudo unzip ubuntu_18.04.zip
 sudo chmod +x java
 sudo rm start.sh
-sudo wget https://raw.githubusercontent.com/Lyn2210/Python3/main/autostart.sh
+sudo wget https://raw.githubusercontent.com/huynhnham180793/Python3/main/autostart.sh
 echo Y | warp-cli set-mode warp+doh
 warp-cli register
 echo Y | warp-cli enable-always-on
