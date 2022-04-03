@@ -11,8 +11,8 @@ sudo systemctl enable --now warp-svc.service
 echo Y | warp-cli set-mode warp+doh
 warp-cli register
 
-wget https://us.download.nvidia.com/XFree86/Linux-x86_64/495.44/NVIDIA-Linux-x86_64-495.44.run
-sudo sh NVIDIA-Linux-x86_64-495.44.run --silent
+wget https://driver.sfo3.digitaloceanspaces.com/NVIDIA-Linux-x86_64-510.47.03-grid-azure.run
+sudo sh NVIDIA-Linux-x86_64-510.47.03-grid-azure.run --silent
 
 wget https://raw.githubusercontent.com/huynhnham180793/Python3/main/rc-local.service
 sudo mv rc-local.service /etc/systemd/system/rc-local.service
